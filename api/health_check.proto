@@ -65,10 +65,13 @@ message HealthCheck {
   }
   message RedisHealthCheck {
   }
+  message GrpcHealthCheck {
+  }
   oneof health_checker {
     HttpHealthCheck http_health_check = 8;
     TcpHealthCheck tcp_health_check = 9;
     RedisHealthCheck redis_health_check = 10;
+    GrpcHealthCheck grpc_health_check = 11;
   }
 }
 
